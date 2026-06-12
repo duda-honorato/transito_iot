@@ -32,8 +32,8 @@ Este projeto implementa uma solução distribuída de monitoramento de trânsito
 
 ## 🚀 Como Executar
 
-### 1. Clone ou crie a estrutura do projeto
-
+### Passo 1: Estrutura do Projeto
+Primeiro, crie a seguinte estrutura de diretórios e arquivos:
 ```bash
 transito_iot/
 ├── sensor_radar.py
@@ -45,3 +45,50 @@ transito_iot/
 ├── atuador_camera.py
 └── shared/
     └── config.py
+
+### Passo 2: Abrir os Terminais
+
+Você precisará de **NO MÍNIMO 5 terminais/janelas** de comando abertas.
+
+| Terminal | Componente | Comando |
+|----------|------------|---------|
+| Terminal 1 | Servidor Nuvem | `python servidor_nuvem.py` |
+| Terminal 2 | SmartGateway | `python smart_gateway.py` |
+| Terminal 3 | Atuador Painel | `python atuador_painel.py` |
+| Terminal 4 | Atuador Display | `python atuador_display.py` |
+| Terminal 5 | Sensor Radar | `python sensor_radar.py` |
+
+### Passo 3: Executar na Ordem Correta (IMPORTANTE!)
+
+> ⚠️ **A ordem de execução é essencial!** Siga exatamente como abaixo:
+
+```bash
+# ┌─────────────────────────────────────────────────────────────┐
+# │ TERMINAL 1 - PRIMEIRO: Servidor Nuvem                       │
+# └─────────────────────────────────────────────────────────────┘
+cd transito_iot
+python servidor_nuvem.py
+
+# ┌─────────────────────────────────────────────────────────────┐
+# │ TERMINAL 2 - SEGUNDO: SmartGateway                          │
+# └─────────────────────────────────────────────────────────────┘
+cd transito_iot
+python smart_gateway.py
+
+# ┌─────────────────────────────────────────────────────────────┐
+# │ TERMINAL 3 - TERCEIRO: Atuador Painel                       │
+# └─────────────────────────────────────────────────────────────┘
+cd transito_iot
+python atuador_painel.py
+
+# ┌─────────────────────────────────────────────────────────────┐
+# │ TERMINAL 4 - QUARTO: Atuador Display                        │
+# └─────────────────────────────────────────────────────────────┘
+cd transito_iot
+python atuador_display.py
+
+# ┌─────────────────────────────────────────────────────────────┐
+# │ TERMINAL 5 - QUINTO: Sensor Radar                           │
+# └─────────────────────────────────────────────────────────────┘
+cd transito_iot
+python sensor_radar.py
