@@ -35,7 +35,7 @@ Este projeto implementa uma solução distribuída de monitoramento de trânsito
 ### Passo 1: Estrutura do Projeto
 Primeiro, crie a seguinte estrutura de diretórios e arquivos:
 
->>>>> INÍCIO
+>>>>> INÍCIO DA ESTRUTURA DE DIRETÓRIOS
 transito_iot/
 ├── sensor_radar.py
 ├── sensor_fluxo.py
@@ -46,7 +46,7 @@ transito_iot/
 ├── atuador_camera.py
 └── shared/
     └── config.py
->>>>> FIM
+>>>>> FIM DA ESTRUTURA DE DIRETÓRIOS
 
 ### Passo 2: Abrir os Terminais
 
@@ -97,6 +97,4 @@ python sensor_radar.py
 
 **TERMINAL 1 - PRIMEIRO: Servidor Nuvem**
 
-```bash
-cd transito_iot
-python servidor_nuvem.py
+
